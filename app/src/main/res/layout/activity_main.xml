@@ -35,5 +35,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pulsame"></Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Limpiar"
+            android:id="@+id/btnLimpiar"></Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerar"
+            android:id="@+id/btnCerrar"></Button>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

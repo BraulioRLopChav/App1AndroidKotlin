@@ -9,6 +9,9 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var btnSaludar:Button;
+    private lateinit var btnLimpiar:Button;
+    private lateinit var btnCerrar:Button;
+
     private lateinit var txtNombre:EditText;
     private lateinit var lblSaludar:TextView;
 
@@ -16,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnSaludar = findViewById(R.id.btnSaludo) as Button;
+        btnLimpiar = findViewById(R.id.btnLimpiar) as Button;
+        btnCerrar = findViewById(R.id.btnCerrar) as Button;
+
         txtNombre = findViewById(R.id.txtSaludo) as EditText;
         lblSaludar = findViewById(R.id.lblSaludo) as TextView;
 
@@ -35,7 +41,15 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        btnLimpiar.setOnClickListener {
+            txtNombre.setText("") // limpia el contenido del EditText
+            lblSaludar.text = "" // limpia el contenido del TextView
+        }
+        btnCerrar.setOnClickListener {
+            finish() // cierra la actividad actual
+        }
 
-            }
+
+    }
 
     }
